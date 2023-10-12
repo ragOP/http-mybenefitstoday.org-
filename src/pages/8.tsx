@@ -93,7 +93,7 @@ export default function Fifth_SP() {
     });
   };
 
-  const [quiz, setQuiz] = useState("Do you make less than $50,000 per year?  ");
+  const [quiz, setQuiz] = useState("1. Do you make less than $50,000 per year?  ");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -161,7 +161,7 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Do you make less than $50,000 per year?  ") {
+    if (quiz === "1. Do you make less than $50,000 per year?  ") {
       setQuiz("2. Are you on Medicare or Medicaid?");
     } else {
       setStep("Reviewing Your Answers...");
@@ -193,7 +193,7 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "Do you make less than $50,000 per year?  ") {
+    if (quiz === "1. Do you make less than $50,000 per year?  ") {
       setQuiz("2. Are you on Medicare or Medicaid?");
     } else {
       setStep("Reviewing Your Answers...");
@@ -235,7 +235,7 @@ export default function Fifth_SP() {
               <div className="main-des-title-6">
                 				{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
-                Americans under 65 can now qualify for<span style={{backgroundColor:"#fde047"}}> FREE Health Plan for Life.</span> Enrollment’s Closing 7PM Today!
+                Americans under 65 can now qualify for <span style={{backgroundColor:"#fde047"}}>FREE Health Plan for Life.</span> Enrollment’s Closing 7PM Today!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
