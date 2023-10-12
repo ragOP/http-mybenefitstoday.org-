@@ -241,10 +241,10 @@ export default function Fifth_SP() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
-              Americans under 65 year old can claim the Free Health Plan that covers all of their Medical Costs including Doctor Visits, Dental Care, Vision Care and much more! Enrol now as today’s the final day and no new enrolments will be made post 7PM today
+              Americans under 65 year old can claim the Free Health Plan that covers all of their Medical Costs including Doctor Visits, Dental Care, Vision Care and much more! <b>Enrol now as today’s the final day and no new enrolments will be made post 7PM today</b>
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
-              To check your eligibility now, answer the questions below and once approved your Free Health Plan will be activated and you’ll no longer have to worry about any of your Medical Costs for life
+              To check your eligibility now, answer the questions below and <b>once approved your Free Health Plan will be activated</b> and you’ll no longer have to worry about any of your Medical Costs for life!
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
@@ -276,7 +276,7 @@ export default function Fifth_SP() {
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
           <a href="tel:+18552350938">
-            <div className="call-btn" onClick={handleCall}>
+            <div className="call-btn glow-effect" onClick={handleCall}>
             CALL (855) 235-0938
             </div>
           </a>
