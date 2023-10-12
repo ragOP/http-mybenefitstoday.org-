@@ -6,7 +6,7 @@ import "./styles.scss";
 
 import { scrollTo } from "../utils";
 
-import Head_bgs from "../assets/hero11.jpg";
+import Head_bgs from "../assets/a.jpg";
 
 import Headline from "../assets/headline_spandeb1.png";
 
@@ -21,7 +21,7 @@ TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
   useEffect(() => {
-    window.document.title = "Senior's Flex Program 2023";
+    window.document.title = "Benefits Programs America";
 
     axios
       .get(process.env.REACT_APP_PROXY + `/visits/8`)
@@ -93,7 +93,7 @@ export default function Fifth_SP() {
     });
   };
 
-  const [quiz, setQuiz] = useState("Are you over the age of 60?  ");
+  const [quiz, setQuiz] = useState("Do you make less than $50,000 per year?  ");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -161,8 +161,8 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Are you over the age of 60?  ") {
-      setQuiz("2. Do you live in the United States?");
+    if (quiz === "Do you make less than $50,000 per year?  ") {
+      setQuiz("2. Are you on Medicare or Medicaid?");
     } else {
       setStep("Reviewing Your Answers...");
       topScroll("top");
@@ -193,8 +193,8 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "Are you over the age of 60?  ") {
-      setQuiz("2. Do you live in the United States?");
+    if (quiz === "Do you make less than $50,000 per year?  ") {
+      setQuiz("2. Are you on Medicare or Medicaid?");
     } else {
       setStep("Reviewing Your Answers...");
       topScroll("top");
@@ -226,7 +226,7 @@ export default function Fifth_SP() {
   return (
     <div>
       <div className="top-sticky-blue" id="top">
-      Senior's Allowance Programs 2023
+      Benefits Programs America
       </div>
       {step === "process" ? (
         <>
@@ -235,23 +235,16 @@ export default function Fifth_SP() {
               <div className="main-des-title-6">
                 				{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
-                  Americans Over 60 Can Now Qualify For The<span style={{backgroundColor:"#fde047"}}> $800 Grocery
-                  Allowance + $1,200 Visa Spend Card.</span> Here's How!
+                Americans under 65 can now qualify for<span style={{backgroundColor:"#fde047"}}> FREE Health Plan for Life.</span> Enrollment’s Closing 7PM Today!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
-                Americans over 60 years old can claim the $800 Grocery Allowance
-                AND the $1,200 Visa Spending Card. These funds can be used to
-                fully cover the cost of their monthly expenses such as
-                Groceries, Rent, Bills and any other expenses they may have!
+              Americans under 65 year old can claim the Free Health Plan that covers all of their Medical Costs including Doctor Visits, Dental Care, Vision Care and much more! Enrol now as today’s the final day and no new enrolments will be made post 7PM today
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
-                If you have not yet claimed your Grocery Card with the Visa
-                monthly allowance then answer the questions below and once
-                approved <b>you will have your $800 Grocery Card + $1,200 Visa Card
-                mailed to you within a few days, ready for use!</b>
+              To check your eligibility now, answer the questions below and once approved your Free Health Plan will be activated and you’ll no longer have to worry about any of your Medical Costs for life
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
@@ -278,13 +271,13 @@ export default function Fifth_SP() {
         <div className="checking">
           <div className="congrats">Congratulation, You Qualify!</div>
           <div className="top-description-5">
-            Make A <b>Quick Call</b>  To Claim Your $800 Grocery Card AND $1,200 Visa Spending Allowance!
+            Make A <b>Quick Call</b>  Activate Your Free Health Plan Now before someone else does!
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-          <a href="tel:+18446170251">
+          <a href="tel:+18552350938">
             <div className="call-btn" onClick={handleCall}>
-              CALL (844) 617-0251
+            CALL (855) 235-0938
             </div>
           </a>
           <div className="sub-title">We Have Reserved Your Spot</div>
