@@ -109,13 +109,14 @@ export default function Fifth_SP() {
     exit: "toast-exit",
   });
   const messages = [
-    "This is message 12",
-    "This is message 2213",
-    "This is message 3",
-    "This is message 4",
-    "This is message 32",
+    "Velia E. Dunn from Salem, OR Qualified For $500 Allowance Card",
+    
+    "Paul N. Parsons from Petersburg, VA Qualified For $500 Allowance Card.",
+    "Paul N. Parsons from New Town, ND Qualified For $500 Allowance Card.",
+    "Mary T. Pritts from Oakland, CA Qualified For $500 Allowance Card.",
+    
   ];
-
+//   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
@@ -290,7 +291,7 @@ export default function Fifth_SP() {
   };
 
   return (
-    <div>
+    <div  style={{ overflow: "hidden" }}>
       <ToastContainer />
       <div className="top-sticky-blue" id="top">
         Benefits Programs America
