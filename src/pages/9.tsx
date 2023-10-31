@@ -122,14 +122,15 @@ export default function Fifth_SP() {
     let boldedMessage = message;
   
   // Make the word "Allowance" bold in all lines
-  boldedMessage = boldedMessage.replace(/Allowance/g, '<strong>Allowance</strong>');
+  boldedMessage = boldedMessage.replace(/Allowance/g, '<strong class="green-bold">Allowance</strong>');
+  boldedMessage = boldedMessage.replace(/Card/g, '<strong class="green-bold">Card</strong>');
   
 
   // Make specific dollar amounts bold only in specific lines
   const specialAmounts = ["$6400", "$3200", "$3600", "$4200"];
   specialAmounts.forEach(amount => {
     if (message.includes(amount)) {
-      boldedMessage = boldedMessage.replace(amount, `<strong>${amount}</strong>`);
+      boldedMessage = boldedMessage.replace(amount, `<strong class="green-bold">${amount}</strong>`);
    
     }
   });
