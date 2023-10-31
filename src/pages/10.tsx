@@ -113,29 +113,35 @@ export default function Fifth_SP() {
     "Paul N. Parsons from Petersburg, VA Qualified For $3200 Allowance Card.",
     "Paul N. Parsons from New Town, ND Qualified For $3600 Allowance Card.",
     "Mary T. Pritts from Oakland, CA Qualified For $4200 Allowance Card.",
-    
   ];
-//   const messages = x.map(message =>  `${message}\n32 sec ago`);
+  //   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
     let boldedMessage = message;
-  
-  // Make the word "Allowance" bold in all lines
-  boldedMessage = boldedMessage.replace(/Allowance/g, '<strong class="green-bold">Allowance</strong>');
-  boldedMessage = boldedMessage.replace(/Card/g, '<strong class="green-bold">Card</strong>');
-  
 
-  // Make specific dollar amounts bold only in specific lines
-  const specialAmounts = ["$6400", "$3200", "$3600", "$4200"];
-  specialAmounts.forEach(amount => {
-    if (message.includes(amount)) {
-      boldedMessage = boldedMessage.replace(amount, `<strong class="green-bold">${amount}</strong>`);
-   
-    }
-  });
+    // Make the word "Allowance" bold in all lines
+    boldedMessage = boldedMessage.replace(
+      /Allowance/g,
+      '<strong class="green-bold">Allowance</strong>'
+    );
+    boldedMessage = boldedMessage.replace(
+      /Card/g,
+      '<strong class="green-bold">Card</strong>'
+    );
+
+    // Make specific dollar amounts bold only in specific lines
+    const specialAmounts = ["$6400", "$3200", "$3600", "$4200"];
+    specialAmounts.forEach((amount) => {
+      if (message.includes(amount)) {
+        boldedMessage = boldedMessage.replace(
+          amount,
+          `<strong class="green-bold">${amount}</strong>`
+        );
+      }
+    });
     // Show new toast
-    toast(  <div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
+    toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: true,
@@ -304,7 +310,7 @@ export default function Fifth_SP() {
   };
 
   return (
-    <div  style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden" }}>
       <ToastContainer />
       <div className="top-sticky-blue" id="top">
         Benefits Programs America
@@ -316,30 +322,32 @@ export default function Fifth_SP() {
               <div className="main-des-title-6-test">
                 {/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
-  Los estadounidenses menores de 65 años ahora pueden calificar para{" "}
-  <span style={{ backgroundColor: "#fde047" }}>
-    El subsidio de créditos de salud de $6400 en 2023.
-  </span>{" "}
-  ¡Así es cómo!
-</b>
-
+                  Los estadounidenses menores de 65 años ahora pueden calificar
+                  para{" "}
+                  <span style={{ backgroundColor: "#fde047" }}>
+                    El subsidio de créditos de salud de $6400 en 2023.
+                  </span>{" "}
+                  ¡Así es cómo!
+                </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
-                Americans under 65 years old can claim the 2023 Health Credits
-                Subsidy that gives them up to $6400. Americans can use the funds
-                to fully cover the cost of their monthly expenses such as
-                Groceries, Rent, Bills and any other expenses they may have!
+                Los estadounidenses menores de 65 años pueden reclamar el
+                subsidio de créditos de salud 2023 que les otorga hasta $6400.
+                Los estadounidenses pueden utilizar los fondos para cubrir
+                completamente el costo de sus gastos mensuales como alimentos,
+                alquiler, facturas y cualquier otro gasto que puedan tener.
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
-                If you have not yet claimed your monthly allowance then answer
-                the questions below and once approved{" "}
+                Si aún no has reclamado tu asignación mensual, entonces responde
+                las preguntas a continuación y una vez aprobado
                 <b>
-                  you will have your $6,400 Health Credits mailed to you within
-                  a few days ready for use!
+                  recibirás tus $6,400 en créditos de salud enviados por correo
+                  en unos pocos días listos para usar!
                 </b>
               </div>
+
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
             <div className="survey">
