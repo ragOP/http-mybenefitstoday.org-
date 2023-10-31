@@ -298,7 +298,7 @@ export default function Fifth_SP() {
               <div className="main-des-title-6">
                 				{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
-                Americans under 65 can now qualify for <span style={{backgroundColor:"#fde047"}}>The $6400 Health Credits Subsidy in 2023. Here's how!</span>
+                Americans under 65 can now qualify for <span style={{backgroundColor:"#fde047"}}>The $6400 Health Credits Subsidy in 2023. </span> Here's how!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
@@ -316,10 +316,10 @@ export default function Fifth_SP() {
                 {quiz}
               </div>
               <div className="answer">
-                <div className="answer-btn-5" onClick={handleQuizP}>
+                <div className="answer-btn-5-test" onClick={handleQuizP}>
                   Yes
                 </div>
-                <div className="answer-btn-5" onClick={handleQuizN}>
+                <div className="answer-btn-5-test" onClick={handleQuizN}>
                   No
                 </div>
               </div>
@@ -340,9 +340,9 @@ export default function Fifth_SP() {
             </div>
             <div className="spots-count">Spots remaining: 4</div>
             <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-            <a href="tel:+18552350938">
+            <a href="tel:18885170494">
               <div className="call-btn glow-effect" onClick={handleCall}>
-                CALL (855) 235-0938
+              CALL (888) 517-0494
               </div>
             </a>
             <div className="sub-title">We Have Reserved Your Spot</div>
