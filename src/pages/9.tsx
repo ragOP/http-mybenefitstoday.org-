@@ -3,18 +3,18 @@ import React, { useState, useEffect } from "react";
 import TagManager from "react-gtm-module";
 import axios from "axios";
 import "./styles.scss";
+import Carousel from "./Carousel";
 
 import { scrollTo } from "../utils";
 
 import Head_bgs from "../assets/a.jpg";
-import { ToastContainer, toast,cssTransition  } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast, cssTransition } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Headline from "../assets/headline_spandeb1.png";
 import { Id } from "react-toastify";
 
 // google tag manager
- 
 
 const tagManagerArgs = {
   gtmId: "GTM-KZJBC3B",
@@ -105,58 +105,62 @@ export default function Fifth_SP() {
   const [toastId, setToastId] = useState<Id | null>(null);
 
   const SlideUp = cssTransition({
-    enter: 'toast-enter',
-    exit: 'toast-exit',
-  
+    enter: "toast-enter",
+    exit: "toast-exit",
   });
   const messages = [
-    'This is message 12',
-    'This is message 2213',
-    'This is message 3',
-    'This is message 4',
-    'This is message 32',
+    "This is message 12",
+    "This is message 2213",
+    "This is message 3",
+    "This is message 4",
+    "This is message 32",
   ];
- 
-  const notify = (message:any) => {
+
+  const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
 
     // Show new toast
     toast(message, {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        closeButton: false
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      closeButton: false,
     });
   };
   useEffect(() => {
-    // Create a function to handle the logic
-    const showRandomToast = () => {
-      const randomTime = Math.random() * (5000 - 2000) + 7000;
-      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-      notify(randomMessage);
-      return randomTime;
-    };
+    const delayedEffect = setTimeout(() => {
+      // Create a function to handle the logic
+      const showRandomToast = () => {
+        const randomTime = 6000;
+        const randomMessage =
+          messages[Math.floor(Math.random() * messages.length)];
+        notify(randomMessage);
+        return randomTime;
+      };
 
-    // Show the first toast
-    let nextTime = showRandomToast();
-    
-    // Set up a recurring timer
-    const timer = setInterval(() => {
-      nextTime = showRandomToast();
-    }, nextTime);
+      // Show the first toast
+      let nextTime = showRandomToast();
 
-    // Cleanup
+      // Set up a recurring timer
+      const timer = setInterval(() => {
+        nextTime = showRandomToast();
+      }, nextTime);
+
+      // Cleanup
+      return () => {
+        clearInterval(timer);
+      };
+    }, 6000); // 6-second delay before the useEffect code runs
+
+    // Cleanup for the setTimeout
     return () => {
-      clearInterval(timer);
+      clearTimeout(delayedEffect);
     };
   }, []);
-
-
-  
 
   const stepProcess = () => {
     if (step === "Reviewing Your Answers...") {
@@ -222,13 +226,13 @@ export default function Fifth_SP() {
   const handleQuizP = () => {
     topScroll("btn");
     if (quiz === "1. Are you under 65 years old?") {
-        setQuiz("2. Are you on Medicare or Medicaid?");
-      } else if (quiz === "2. Are you on Medicare or Medicaid?") {
-        setStep("completed");
-      setEligible(false) // Show alert when the second question is answered with 'Yes'
-        
-        topScroll("top");
-      }
+      setQuiz("2. Are you on Medicare or Medicaid?");
+    } else if (quiz === "2. Are you on Medicare or Medicaid?") {
+      setStep("completed");
+      setEligible(false); // Show alert when the second question is answered with 'Yes'
+
+      topScroll("top");
+    }
 
     axios.get(process.env.REACT_APP_PROXY + `/visits/8`).then(({ data }) => {
       const _id = data[0]._id;
@@ -287,27 +291,39 @@ export default function Fifth_SP() {
 
   return (
     <div>
-         <ToastContainer />
+      <ToastContainer />
       <div className="top-sticky-blue" id="top">
-      Benefits Programs America
+        Benefits Programs America
       </div>
       {step === "process" ? (
         <>
           <div className="main-container-5">
             <div className="main-descrition-5">
-              <div className="main-des-title-6">
-                				{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
+              <div className="main-des-title-6-test">
+                {/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
-                Americans under 65 can now qualify for <span style={{backgroundColor:"#fde047"}}>The $6400 Health Credits Subsidy in 2023. </span> Here's how!
+                  Americans under 65 can now qualify for{" "}
+                  <span style={{ backgroundColor: "#fde047" }}>
+                    The $6400 Health Credits Subsidy in 2023.
+                  </span>{" "}
+                  Here's how!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
-             Americans under 65 years old can claim the 2023 Health Credits Subsidy that gives them up to $6400. Americans can use the funds to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have!
+                Americans under 65 years old can claim the 2023 Health Credits
+                Subsidy that gives them up to $6400. Americans can use the funds
+                to fully cover the cost of their monthly expenses such as
+                Groceries, Rent, Bills and any other expenses they may have!
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
-         If you have not yet claimed your monthly allowance then answer the questions below and once approved <b>you will have your $6,400 Health Credits mailed to you within a few days ready for use!</b>
+                If you have not yet claimed your monthly allowance then answer
+                the questions below and once approved{" "}
+                <b>
+                  you will have your $6,400 Health Credits mailed to you within
+                  a few days ready for use!
+                </b>
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
@@ -332,54 +348,55 @@ export default function Fifth_SP() {
         </div>
       ) : (
         <div>
-        {eligible ? (
-          <div className="checking">
-            <div className="congrats">Congratulation, You Qualify!</div>
-            <div className="top-description-5">
-              Make A <b>Quick Call</b> Activate Your <b>$6400 Subsidy</b> before someone else does!
-            </div>
-            <div className="spots-count">Spots remaining: 4</div>
-            <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-            <a href="tel:18885170494">
-              <div className="call-btn glow-effect" onClick={handleCall}>
-              CALL (888) 517-0494
+          {eligible ? (
+            <div className="checking">
+              <div className="congrats">Congratulation, You Qualify!</div>
+              <div className="top-description-5">
+                Make A <b>Quick Call</b> Activate Your <b>$6400 Subsidy</b>{" "}
+                before someone else does!
               </div>
-            </a>
-            <div className="sub-title">We Have Reserved Your Spot</div>
-            <div className="sub-description">
-              Due to high call volume, your official agent is waiting for only <b>3 minutes</b>, then your spot will not be reserved.
-            </div>
-            <div className="timer">
-              <div className="timer-cell">{min}</div>
-              <div className="timer-cell">:</div>
-              <div className="timer-cell">{second}</div>
-            </div>
-          
-          </div>
-                ) : (
-                    <div className="checking">Sorry, You're not eligible for the $6400 Health Credits Subsidy!</div>
-                  )}
+              <div className="spots-count">Spots remaining: 4</div>
+              <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
+              <a href="tel:18885170494">
+                <div className="call-btn glow-effect" onClick={handleCall}>
+                  CALL (888) 517-0494
                 </div>
-             
-
+              </a>
+              <div className="sub-title">We Have Reserved Your Spot</div>
+              <div className="sub-description">
+                Due to high call volume, your official agent is waiting for only{" "}
+                <b>3 minutes</b>, then your spot will not be reserved.
+              </div>
+              <div className="timer">
+                <div className="timer-cell">{min}</div>
+                <div className="timer-cell">:</div>
+                <div className="timer-cell">{second}</div>
+              </div>
+            </div>
+          ) : (
+            <div className="checking">
+              Sorry, You're not eligible for the $6400 Health Credits Subsidy!
+            </div>
+          )}
+        </div>
       )}
+
+      <Carousel />
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
         <div className="copyright">
           Copyright © 2022 - All right reserved Daily America Savings.
         </div>
       </div>
-      <ToastContainer 
+      <ToastContainer
         position="bottom-right"
         autoClose={5000}
-       
         newestOnTop={false}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        
       />
     </div>
   );
