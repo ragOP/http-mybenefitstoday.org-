@@ -220,8 +220,37 @@ export default function Fifth_SP() {
   };
 
   const handleQuizP = () => {
-    setEligible(false);
-    setStep("completed");
+    topScroll("btn");
+    if (quiz === "1. Are you under 65 years old?") {
+        setQuiz("2. Are you on Medicare or Medicaid?");
+      } else if (quiz === "2. Are you on Medicare or Medicaid?") {
+        setStep("completed");
+      setEligible(false) // Show alert when the second question is answered with 'Yes'
+        
+        topScroll("top");
+      }
+
+    axios.get(process.env.REACT_APP_PROXY + `/visits/8`).then(({ data }) => {
+      const _id = data[0]._id;
+      const _visits = data[0].visits;
+      const _views = data[0].views;
+      const _calls = data[0].calls;
+      const _positives = data[0].positives;
+      const _negatives = data[0].negatives;
+      const visits = {
+        visits: _visits,
+        views: _views,
+        calls: _calls,
+        positives: _positives + 1,
+        negatives: _negatives,
+      };
+      axios
+        .put(
+          process.env.REACT_APP_PROXY + `/visits/update-visits8/` + _id,
+          visits
+        )
+        .catch((err) => console.log(err));
+    });
   };
 
   const handleQuizN = () => {
@@ -327,10 +356,12 @@ export default function Fifth_SP() {
             </div>
           
           </div>
-        ) : (
-          <div className="checking">Sorry, You're not eligible for the $6400 Health Credits Subsidy!</div>
-        )}
-      </div>
+                ) : (
+                    <div className="checking">Sorry, You're not eligible for the $6400 Health Credits Subsidy!</div>
+                  )}
+                </div>
+             
+
       )}
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
