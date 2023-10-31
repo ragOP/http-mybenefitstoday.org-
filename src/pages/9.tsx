@@ -109,20 +109,32 @@ export default function Fifth_SP() {
     exit: "toast-exit",
   });
   const messages = [
-    "Velia E. Dunn from Salem, OR Qualified For $500 Allowance Card",
-    
-    "Paul N. Parsons from Petersburg, VA Qualified For $500 Allowance Card.",
-    "Paul N. Parsons from New Town, ND Qualified For $500 Allowance Card.",
-    "Mary T. Pritts from Oakland, CA Qualified For $500 Allowance Card.",
+    "Velia E. Dunn from Salem, OR Qualified For $6400 Allowance Card",
+    "Paul N. Parsons from Petersburg, VA Qualified For $3200 Allowance Card.",
+    "Paul N. Parsons from New Town, ND Qualified For $3600 Allowance Card.",
+    "Mary T. Pritts from Oakland, CA Qualified For $4200 Allowance Card.",
     
   ];
 //   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
+    let boldedMessage = message;
+  
+  // Make the word "Allowance" bold in all lines
+  boldedMessage = boldedMessage.replace(/Allowance/g, '<strong>Allowance</strong>');
+  
 
+  // Make specific dollar amounts bold only in specific lines
+  const specialAmounts = ["$6400", "$3200", "$3600", "$4200"];
+  specialAmounts.forEach(amount => {
+    if (message.includes(amount)) {
+      boldedMessage = boldedMessage.replace(amount, `<strong>${amount}</strong>`);
+   
+    }
+  });
     // Show new toast
-    toast(message, {
+    toast(  <div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: true,
