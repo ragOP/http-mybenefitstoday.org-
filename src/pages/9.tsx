@@ -99,6 +99,7 @@ export default function Fifth_SP() {
   const [quiz, setQuiz] = useState("1. Are you under 65 years old?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
+  const [eligible, setEligible] = useState(true);
   const [second, setSecond] = useState<any>(0);
   const [showPopup, setShowPopup] = useState(false);
   const [toastId, setToastId] = useState<Id | null>(null);
@@ -219,35 +220,8 @@ export default function Fifth_SP() {
   };
 
   const handleQuizP = () => {
-    topScroll("btn");
-    if (quiz === "1. Are you under 65 years old?") {
-      setQuiz("2. Are you on Medicare or Medicaid?");
-    } else {
-      setStep("Reviewing Your Answers...");
-      topScroll("top");
-    }
-
-    axios.get(process.env.REACT_APP_PROXY + `/visits/8`).then(({ data }) => {
-      const _id = data[0]._id;
-      const _visits = data[0].visits;
-      const _views = data[0].views;
-      const _calls = data[0].calls;
-      const _positives = data[0].positives;
-      const _negatives = data[0].negatives;
-      const visits = {
-        visits: _visits,
-        views: _views,
-        calls: _calls,
-        positives: _positives + 1,
-        negatives: _negatives,
-      };
-      axios
-        .put(
-          process.env.REACT_APP_PROXY + `/visits/update-visits8/` + _id,
-          visits
-        )
-        .catch((err) => console.log(err));
-    });
+    setEligible(false);
+    setStep("completed");
   };
 
   const handleQuizN = () => {
@@ -328,29 +302,35 @@ export default function Fifth_SP() {
           {step}
         </div>
       ) : (
-        <div className="checking">
-          <div className="congrats">Congratulation, You Qualify!</div>
-          <div className="top-description-5">
-            Make A <b>Quick Call</b>   Activate Your <b>$6400 Subsidy</b> before someone else does!
-          </div>
-          <div className="spots-count">Spots remaining: 4</div>
-          <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-          <a href="tel:+18552350938">
-            <div className="call-btn glow-effect" onClick={handleCall}>
-            CALL (855) 235-0938
+        <div>
+        {eligible ? (
+          <div className="checking">
+            <div className="congrats">Congratulation, You Qualify!</div>
+            <div className="top-description-5">
+              Make A <b>Quick Call</b> Activate Your <b>$6400 Subsidy</b> before someone else does!
             </div>
-          </a>
-          <div className="sub-title">We Have Reserved Your Spot</div>
-          <div className="sub-description">
-            Due to high call volume, your official agent is waiting for only{" "}
-            <b>3 minutes</b>, then your spot will not be reserved.
+            <div className="spots-count">Spots remaining: 4</div>
+            <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
+            <a href="tel:+18552350938">
+              <div className="call-btn glow-effect" onClick={handleCall}>
+                CALL (855) 235-0938
+              </div>
+            </a>
+            <div className="sub-title">We Have Reserved Your Spot</div>
+            <div className="sub-description">
+              Due to high call volume, your official agent is waiting for only <b>3 minutes</b>, then your spot will not be reserved.
+            </div>
+            <div className="timer">
+              <div className="timer-cell">{min}</div>
+              <div className="timer-cell">:</div>
+              <div className="timer-cell">{second}</div>
+            </div>
+          
           </div>
-          <div className="timer">
-            <div className="timer-cell">{min}</div>
-            <div className="timer-cell">:</div>
-            <div className="timer-cell">{second}</div>
-          </div>
-        </div>
+        ) : (
+          <div className="checking">Sorry, You're not eligible for the $6400 Health Credits Subsidy!</div>
+        )}
+      </div>
       )}
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
