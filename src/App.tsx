@@ -15,6 +15,7 @@ import Fifth_SP from './pages/5_sp';
 import Sixth_SP from './pages/6_en';
 import S from './pages/7'
 import New from './pages/8'
+import Model from './pages/9'
 
 import Visits from "./pages/visits";
 
@@ -32,6 +33,7 @@ function App() {
           {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
              {/* <Route path = "/engmed1" element = {<S />} /> */}
           <Route path = "/engaca1" element = {<New/>}/>
+          <Route path = "/test" element = {<Model/>}/>
           {/* <Route path = "/spanmed1" element = {<Third_SP />} />
           <Route path = "/hbosolar" element = {<Forth_EN />} />
           <Route path = "/spanfe1" element = {<Forth_SP />} />
