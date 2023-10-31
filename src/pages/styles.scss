@@ -117,10 +117,23 @@ a{
 
   .main-des-title-6-test{
     font-size: 1.7rem;
-    line-height: 3.0rem;
-    font-weight: 600;
+   
+
+    font-weight: 900;
+    
+
+
+    
     padding: 1rem 0;
     color: #1f2937;
+  }
+
+  @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .main-des-title-6-test {
+    // margin-top: -0.1rem;
+      font-size: 1.5rem; /* Reduce the font size for smaller screens */
+      line-height: 1.2; /* Adjust the line height as needed */
+    }
   }
 
   .main-des-title-smaller{
