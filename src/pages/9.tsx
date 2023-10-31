@@ -395,7 +395,7 @@ export default function Fifth_SP() {
         </div>
       )}
 
-      <Carousel />
+      {/* <Carousel /> */}
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
         <div className="copyright">
