@@ -7,8 +7,11 @@ import "./styles.scss";
 import { scrollTo } from "../utils";
 
 import Head_bgs from "../assets/a.jpg";
+import { ToastContainer, toast,cssTransition  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Headline from "../assets/headline_spandeb1.png";
+import { Id } from "react-toastify";
 
 // google tag manager
  
@@ -98,34 +101,59 @@ export default function Fifth_SP() {
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
   const [showPopup, setShowPopup] = useState(false);
-  const [message, setMessage] = useState('');
+  const [toastId, setToastId] = useState<Id | null>(null);
 
+  const SlideUp = cssTransition({
+    enter: 'toast-enter',
+    exit: 'toast-exit',
+  
+  });
   const messages = [
-    'This is message 1',
-    'This is message 2',
+    'This is message 12',
+    'This is message 2213',
     'This is message 3',
     'This is message 4',
-    'This is message 5',
+    'This is message 32',
   ];
+ 
+  const notify = (message:any) => {
+    // Dismiss all existing toasts
+    toast.dismiss();
 
-  // Function to show the popup randomly
-  useEffect(() => {
-    const randomTime = Math.random() * (5000 - 2000) + 2000; // Between 2 and 5 seconds
-    const timer = setTimeout(() => {
-      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-      setMessage(randomMessage);
-      setShowPopup(true);
-    }, randomTime);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [messages]);
-
-  // Hide the popup
-  const hidePopup = () => {
-    setShowPopup(false);
+    // Show new toast
+    toast(message, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        closeButton: false
+    });
   };
+  useEffect(() => {
+    // Create a function to handle the logic
+    const showRandomToast = () => {
+      const randomTime = Math.random() * (5000 - 2000) + 7000;
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      notify(randomMessage);
+      return randomTime;
+    };
+
+    // Show the first toast
+    let nextTime = showRandomToast();
+    
+    // Set up a recurring timer
+    const timer = setInterval(() => {
+      nextTime = showRandomToast();
+    }, nextTime);
+
+    // Cleanup
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
 
   
 
@@ -256,6 +284,7 @@ export default function Fifth_SP() {
 
   return (
     <div>
+         <ToastContainer />
       <div className="top-sticky-blue" id="top">
       Benefits Programs America
       </div>
@@ -275,7 +304,7 @@ export default function Fifth_SP() {
              Americans under 65 years old can claim the 2023 Health Credits Subsidy that gives them up to $6400. Americans can use the funds to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have!
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
-         If you have not yet claimed your monthly allowance then answer the questions below and once approved you will have your $6,400 Health Credits mailed to you within a few days ready for use!
+         If you have not yet claimed your monthly allowance then answer the questions below and once approved <b>you will have your $6,400 Health Credits mailed to you within a few days ready for use!</b>
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
@@ -302,7 +331,7 @@ export default function Fifth_SP() {
         <div className="checking">
           <div className="congrats">Congratulation, You Qualify!</div>
           <div className="top-description-5">
-            Make A <b>Quick Call</b>  Activate Your Free Health Plan Now before someone else does!
+            Make A <b>Quick Call</b>   Activate Your <b>$6400 Subsidy</b> before someone else does!
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
@@ -329,24 +358,18 @@ export default function Fifth_SP() {
           Copyright © 2022 - All right reserved Daily America Savings.
         </div>
       </div>
-      {showPopup && (
-        <div style={{
-            position: 'fixed',
-            bottom: showPopup ? '0' : '-100px',
-            right: '0',
-            background: '#fff',
-            border: '1px solid #ccc',
-            padding: '20px',
-            zIndex: '1000',
-            transition: 'bottom 0.5s ease-in-out'
-        }}>
-          <button style={{ position: 'absolute', top: '0', right: '0', cursor: 'pointer' }} 
-                  >
-            
-          </button>
-          <p>{message}</p>
-        </div>
-      )}
+      <ToastContainer 
+        position="bottom-right"
+        autoClose={5000}
+       
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        
+      />
     </div>
   );
 }

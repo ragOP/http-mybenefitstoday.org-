@@ -2,7 +2,15 @@ a{
     text-decoration: none;
     color: inherit;
   }
-  
+  .Toastify__slide-enter--bottom-right,
+.Toastify__slide-enter--bottom-left {
+  transform: translateY(100%);
+}
+.Toastify__slide-exit--bottom-right,
+.Toastify__slide-exit--bottom-left {
+  transform: translateY(100%);
+}
+
   .top-sticky{
     padding: 0.75rem;
     background-color: rgb(220 38 38);

@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+.Toastify__slide-enter--bottom-right,
+.Toastify__slide-enter--bottom-left {
+  transform: translateY(100%);
+}
+.Toastify__slide-exit--bottom-right,
+.Toastify__slide-exit--bottom-left {
+  transform: translateY(100%);
+}
+
 
 .App-logo {
   height: 40vmin;
