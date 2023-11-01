@@ -96,7 +96,7 @@ export default function Fifth_SP() {
     });
   };
 
-  const [quiz, setQuiz] = useState("1. Are you under 65 years old?");
+  const [quiz, setQuiz] = useState("1. ¿Tienes menos de 65 años?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [eligible, setEligible] = useState(true);
@@ -245,9 +245,9 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "1. Are you under 65 years old?") {
-      setQuiz("2. Are you on Medicare or Medicaid?");
-    } else if (quiz === "2. Are you on Medicare or Medicaid?") {
+    if (quiz === "1. ¿Tienes menos de 65 años?") {
+      setQuiz(" ¿Está usted en Medicare o Medicaid?");
+    } else if (quiz === " ¿Está usted en Medicare o Medicaid?") {
       setStep("completed");
       setEligible(false); // Show alert when the second question is answered with 'Yes'
 
@@ -279,8 +279,8 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "1. Are you under 65 years old?") {
-      setQuiz("2. Are you on Medicare or Medicaid?");
+    if (quiz === "1. ¿Tienes menos de 65 años?") {
+      setQuiz(" ¿Está usted en Medicare o Medicaid?");
     } else {
       setStep("Reviewing Your Answers...");
       topScroll("top");
@@ -356,7 +356,7 @@ export default function Fifth_SP() {
               </div>
               <div className="answer">
                 <div className="answer-btn-5-test" onClick={handleQuizP}>
-                  Yes
+                  Si
                 </div>
                 <div className="answer-btn-5-test" onClick={handleQuizN}>
                   No
@@ -373,10 +373,9 @@ export default function Fifth_SP() {
         <div>
           {eligible ? (
             <div className="checking">
-              <div className="congrats">Congratulation, You Qualify!</div>
+              <div className="congrats">¡Felicidades, usted califica!</div>
               <div className="top-description-5">
-                Make A <b>Quick Call</b> Activate Your <b>$6400 Subsidy</b>{" "}
-                before someone else does!
+              ¡Realice una llamada rápida para activar su subsidio de <b>$6400</b>antes de que alguien más lo haga!
               </div>
               <div className="spots-count">Spots remaining: 4</div>
               <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
@@ -385,10 +384,9 @@ export default function Fifth_SP() {
                   CALL (888) 517-0494
                 </div>
               </a>
-              <div className="sub-title">We Have Reserved Your Spot</div>
+              <div className="sub-title">Hemos Reservado Su Lugar</div>
               <div className="sub-description">
-                Due to high call volume, your official agent is waiting for only{" "}
-                <b>3 minutes</b>, then your spot will not be reserved.
+              Debido al alto volumen de llamadas, su agente oficial esperará solo <b>3 minutos</b>, luego su lugar no será reservado.
               </div>
               <div className="timer">
                 <div className="timer-cell">{min}</div>
