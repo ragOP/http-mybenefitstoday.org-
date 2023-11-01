@@ -321,14 +321,7 @@ export default function Fifth_SP() {
             <div className="main-descrition-5">
               <div className="main-des-title-6-test">
                 {/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
-                <b>
-                  Los estadounidenses menores de 65 años ahora pueden calificar
-                  para{" "}
-                  <span style={{ backgroundColor: "#fde047" }}>
-                    El subsidio de créditos de salud de $6400 en 2023.
-                  </span>{" "}
-                  ¡Así es cómo!
-                </b>
+                Los estadounidenses menores de 65 años ahora pueden calificar para <span style={{backgroundColor:"#fde047"}}>el Subsidio de Créditos de Salud de $6400 en 2023.</span>¡Así es cómo!
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
@@ -377,8 +370,8 @@ export default function Fifth_SP() {
               <div className="top-description-5">
               ¡Realice una llamada rápida para activar su subsidio de <b>$6400</b>antes de que alguien más lo haga!
               </div>
-              <div className="spots-count">Spots remaining: 4</div>
-              <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
+              <div className="spots-count">Espacios restantes: 4</div>
+              <div className="tap-direction">👇 TOQUE ABAJO PARA LLAMAR 👇</div>
               <a href="tel:18885170494">
                 <div className="call-btn glow-effect" onClick={handleCall}>
                   CALL (888) 517-0494
