@@ -183,17 +183,17 @@ export default function Fifth_SP() {
   }, []);
 
   const stepProcess = () => {
-    if (step === "Reviewing Your Answers...") {
+    if (step === "Revisando Sus Respuestas..") {
       setTimeout(() => {
-        setStep("Matching With Best Options...");
+        setStep("Combinando Con Las Mejores Opciones...");
       }, 1500);
     }
-    if (step === "Matching With Best Options...") {
+    if (step === "Combinando Con Las Mejores Opciones...") {
       setTimeout(() => {
-        setStep("Confirming Eligibility...");
+        setStep("Confirmando La Elegibilidad...");
       }, 1500);
     }
-    if (step === "Confirming Eligibility...") {
+    if (step === "Confirmando La Elegibilidad...") {
       setTimeout(() => {
         setStep("completed");
 
@@ -282,7 +282,7 @@ export default function Fifth_SP() {
     if (quiz === "1. ¿Tienes menos de 65 años?") {
       setQuiz("  2 ¿Está usted en Medicare o Medicaid?");
     } else {
-      setStep("Reviewing Your Answers...");
+      setStep("Revisando Sus Respuestas..");
       topScroll("top");
     }
 
@@ -389,7 +389,7 @@ export default function Fifth_SP() {
             </div>
           ) : (
             <div className="checking">
-              Sorry, You're not eligible for the $6400 Health Credits Subsidy!
+              Lo siento, ¡no califica para el Subsidio de Créditos de Salud de $6400!
             </div>
           )}
         </div>
