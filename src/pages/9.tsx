@@ -111,8 +111,8 @@ export default function Fifth_SP() {
   const messages = [
     "Velia E. Dunn from Salem, OR just Qualified for $6400 Allowance Card",
     "Paul N. Parsons from Petersburg, VA just Qualified For $3200 Allowance Card.",
-    "Paul N. Parsons from New Town, ND just Qualified For $3600 Allowance Card.",
-    "Mary T. Pritts from Oakland, CA just Qualified For $4200 Allowance Card.",
+    "Paul N. Parsons from New Town, ND just Qualified for $3600 Allowance Card.",
+    "Mary T. Pritts from Oakland, CA just Qualified for $4200 Allowance Card.",
   ];
   //   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
