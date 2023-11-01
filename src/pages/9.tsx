@@ -109,33 +109,39 @@ export default function Fifth_SP() {
     exit: "toast-exit",
   });
   const messages = [
-    "Velia E. Dunn from Salem, OR Qualified For $6400 Allowance Card",
-    "Paul N. Parsons from Petersburg, VA Qualified For $3200 Allowance Card.",
-    "Paul N. Parsons from New Town, ND Qualified For $3600 Allowance Card.",
-    "Mary T. Pritts from Oakland, CA Qualified For $4200 Allowance Card.",
-    
+    "Velia E. Dunn from Salem, OR just Qualified For $6400 Allowance Card",
+    "Paul N. Parsons from Petersburg, VA just Qualified For $3200 Allowance Card.",
+    "Paul N. Parsons from New Town, ND just Qualified For $3600 Allowance Card.",
+    "Mary T. Pritts from Oakland, CA just Qualified For $4200 Allowance Card.",
   ];
-//   const messages = x.map(message =>  `${message}\n32 sec ago`);
+  //   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
     let boldedMessage = message;
-  
-  // Make the word "Allowance" bold in all lines
-  boldedMessage = boldedMessage.replace(/Allowance/g, '<strong class="green-bold">Allowance</strong>');
-  boldedMessage = boldedMessage.replace(/Card/g, '<strong class="green-bold">Card</strong>');
-  
 
-  // Make specific dollar amounts bold only in specific lines
-  const specialAmounts = ["$6400", "$3200", "$3600", "$4200"];
-  specialAmounts.forEach(amount => {
-    if (message.includes(amount)) {
-      boldedMessage = boldedMessage.replace(amount, `<strong class="green-bold">${amount}</strong>`);
-   
-    }
-  });
+    // Make the word "Allowance" bold in all lines
+    boldedMessage = boldedMessage.replace(
+      /Allowance/g,
+      '<strong class="green-bold">Allowance</strong>'
+    );
+    boldedMessage = boldedMessage.replace(
+      /Card/g,
+      '<strong class="green-bold">Card</strong>'
+    );
+
+    // Make specific dollar amounts bold only in specific lines
+    const specialAmounts = ["$6400", "$3200", "$3600", "$4200"];
+    specialAmounts.forEach((amount) => {
+      if (message.includes(amount)) {
+        boldedMessage = boldedMessage.replace(
+          amount,
+          `<strong class="green-bold">${amount}</strong>`
+        );
+      }
+    });
     // Show new toast
-    toast(  <div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
+    toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: true,
@@ -304,7 +310,7 @@ export default function Fifth_SP() {
   };
 
   return (
-    <div  style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden" }}>
       <ToastContainer />
       <div className="top-sticky-blue" id="top">
         Benefits Programs America
@@ -392,11 +398,14 @@ export default function Fifth_SP() {
               Sorry, You're not eligible for the $6400 Health Credits Subsidy!
             </div>
           )}
+
         </div>
       )}
-
+     
+     {/* <div  className="powr-image-carousel" id="7bc9faac_1698800330"></div> */}
       {/* <Carousel /> */}
       <div className="footer">
+        
         <div className="terms">Terms & Conditions | Privacy Policy</div>
         <div className="copyright">
           Copyright © 2022 - All right reserved Daily America Savings.
