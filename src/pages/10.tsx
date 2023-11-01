@@ -109,10 +109,10 @@ export default function Fifth_SP() {
     exit: "toast-exit",
   });
   const messages = [
-    "Velia E. Dunn from Salem, OR Qualified For $6400 Allowance Card",
-    "Paul N. Parsons from Petersburg, VA Qualified For $3200 Allowance Card.",
-    "Paul N. Parsons from New Town, ND Qualified For $3600 Allowance Card.",
-    "Mary T. Pritts from Oakland, CA Qualified For $4200 Allowance Card.",
+    "Velia E. Dunn from Salem, OR just qualified for $6400 Allowance Card",
+    "Paul N. Parsons from Petersburg, VA just qualified for $3200 Allowance Card.",
+    "Paul N. Parsons from New Town, ND just qualified for $3600 Allowance Card.",
+    "Mary T. Pritts from Oakland, CA just qualified for $4200 Allowance Card.",
   ];
   //   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
@@ -246,8 +246,8 @@ export default function Fifth_SP() {
   const handleQuizP = () => {
     topScroll("btn");
     if (quiz === "1. ¿Tienes menos de 65 años?") {
-      setQuiz(" ¿Está usted en Medicare o Medicaid?");
-    } else if (quiz === " ¿Está usted en Medicare o Medicaid?") {
+      setQuiz("  2 ¿Está usted en Medicare o Medicaid?");
+    } else if (quiz === "  2 ¿Está usted en Medicare o Medicaid?") {
       setStep("completed");
       setEligible(false); // Show alert when the second question is answered with 'Yes'
 
@@ -280,7 +280,7 @@ export default function Fifth_SP() {
   const handleQuizN = () => {
     topScroll("btn");
     if (quiz === "1. ¿Tienes menos de 65 años?") {
-      setQuiz(" ¿Está usted en Medicare o Medicaid?");
+      setQuiz("  2 ¿Está usted en Medicare o Medicaid?");
     } else {
       setStep("Reviewing Your Answers...");
       topScroll("top");
