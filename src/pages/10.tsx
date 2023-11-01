@@ -368,7 +368,7 @@ export default function Fifth_SP() {
             <div className="checking">
               <div className="congrats">¡Felicidades, usted califica!</div>
               <div className="top-description-5">
-              ¡Realice una llamada rápida para activar su subsidio de <b>$6400</b> antes de que alguien más lo haga!
+              ¡Realice una llamada rápida para activar su <b>subsidio de $6400</b> antes de que alguien más lo haga!
               </div>
               <div className="spots-count">Espacios restantes: 4</div>
               <div className="tap-direction">👇 TOQUE ABAJO PARA LLAMAR 👇</div>
