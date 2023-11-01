@@ -114,6 +114,15 @@ a{
     padding: 1rem 0;
     color: #1f2937;
   }
+  .powr-image-carousel {
+    width: 300px !important;
+    height: 500px !important;
+    margin-top: 100px !important;
+    margin-left: 30px !important;; 
+    max-height: 529.6px !important;
+    background-size: 288px 434.441px !important;
+    background-position: 0px -129.225px!important;
+  }
 
   .main-des-title-6-test{
     font-size: 1.7rem;
@@ -347,6 +356,12 @@ a{
   
   .tap-direction{
     font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+  .tap-direction-test{
+    font-size: 0.9rem;
     line-height: 1.75rem;
     font-weight: 700;
     margin-top: 2rem;

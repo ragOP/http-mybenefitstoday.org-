@@ -371,10 +371,10 @@ export default function Fifth_SP() {
               ¡Realice una llamada rápida para activar su <b>subsidio de $6400</b> antes de que alguien más lo haga!
               </div>
               <div className="spots-count">Espacios restantes: 4</div>
-              <div className="tap-direction">👇 TOQUE ABAJO PARA LLAMAR 👇</div>
-              <a href="tel:18885170494">
+              <div className="tap-direction-test">👇 TOQUE ABAJO PARA LLAMAR 👇</div>
+              <a href="tel:+18662275754">
                 <div className="call-btn glow-effect" onClick={handleCall}>
-                  CALL (888) 517-0494
+                CALL (866) 227-5754
                 </div>
               </a>
               <div className="sub-title">Hemos Reservado Su Lugar</div>
