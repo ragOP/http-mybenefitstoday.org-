@@ -26,7 +26,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {/* c */}
+        
           {/* <Route path = "/engaca1" element = {<First_EN />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
           <Route path = "/engaca2" element = {<Second_EN />} />
