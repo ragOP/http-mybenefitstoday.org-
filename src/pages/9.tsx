@@ -324,7 +324,7 @@ export default function Fifth_SP() {
                 <b>
                   Americans under 65 can now qualify for{" "}
                   <span style={{ backgroundColor: "#fde047" }}>
-                    The $6400 Health Credits Subsidy in 2023.
+                    The $6400 Health Credits Subsidy in 2024.
                   </span>{" "}
                   Here's how!
                 </b>
@@ -332,7 +332,7 @@ export default function Fifth_SP() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
-                Americans under 65 years old can claim the 2023 Health Credits
+                Americans under 65 years old can claim the 2024 Health Credits
                 Subsidy that gives them up to $6400. Americans can use the funds
                 to fully cover the cost of their monthly expenses such as
                 Groceries, Rent, Bills and any other expenses they may have!
@@ -408,7 +408,7 @@ export default function Fifth_SP() {
         
         <div className="terms">Terms & Conditions | Privacy Policy</div>
         <div className="copyright">
-          Copyright © 2022 - All right reserved Daily America Savings.
+          Copyright © 2024 - All right reserved Daily America Savings.
         </div>
       </div>
       <ToastContainer
