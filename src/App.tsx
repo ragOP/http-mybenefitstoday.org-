@@ -33,9 +33,9 @@ function App() {
           <Route path = "/spanaca2" element = {<Second_SP />} /> */}
           {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
              {/* <Route path = "/engmed1" element = {<S />} /> */}
-          <Route path = "/engaca1" element = {<New/>}/>
-          <Route path = "/test" element = {<Model/>}/>
-          <Route path = "/spanish" element = {<Spain/>}/>
+{/*           <Route path = "/engaca1" element = {<New/>}/> */}
+          <Route path = "/" element = {<Model/>}/>
+{/*           <Route path = "/spanish" element = {<Spain/>}/> */}
           {/* <Route path = "/spanmed1" element = {<Third_SP />} />
           <Route path = "/hbosolar" element = {<Forth_EN />} />
           <Route path = "/spanfe1" element = {<Forth_SP />} />
