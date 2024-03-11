@@ -28,7 +28,7 @@ function App() {
         <Routes>
         
           {/* <Route path = "/engaca1" element = {<First_EN />} />
-          <Route path = "/spanaca1" element = {<First_SP />} />
+          
           <Route path = "/engaca2" element = {<Second_EN />} />
           <Route path = "/spanaca2" element = {<Second_SP />} /> */}
           {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
