@@ -248,7 +248,7 @@ export default function Fifth_SP() {
     if (quiz === "1. Are you under 65 years old?") {
       setQuiz("2. Are you on Medicare or Medicaid?");
     } else if (quiz === "2. Are you on Medicare or Medicaid?") {
-      setStep("completed");
+       setStep("Reviewing Your Answers...");
       setEligible(true); // Show alert when the second question is answered with 'Yes'
 
       topScroll("top");
