@@ -341,7 +341,7 @@ export default function Fifth_SP() {
                 If you have not yet claimed your monthly allowance then answer
                 the questions below and once approved{" "}
                 <b>
-                  you will have your $6,400 Health Credits mailed to you within
+                  you will have your $16,800 Health Credits mailed to you within
                   a few days ready for use!
                 </b>
               </div>
