@@ -30,17 +30,17 @@ const Carousel = () => {
   const reviews = [
     {
       headline: 'Relief for Everyday Expenses',
-      paragraph: "I never thought I would qualify for the $1400 subsidy card, but I decided to apply anyway. I was pleasantly surprised to find out that I was eligible, and I've been using the card to help me with all sorts of expenses. It's been especially helpful for things like medical bills and prescription medications, which can be really expensive. I'm so grateful for this program and for the peace of mind that it's given me. It's a great resource for anyone who needs a little extra help making ends meet.",
+      paragraph: "I never thought I would qualify for the $16,800 subsidy card, but I decided to apply anyway. I was pleasantly surprised to find out that I was eligible, and I've been using the card to help me with all sorts of expenses. It's been especially helpful for things like medical bills and prescription medications, which can be really expensive. I'm so grateful for this program and for the peace of mind that it's given me. It's a great resource for anyone who needs a little extra help making ends meet.",
       name: 'Paula A.',
     },
     {
       headline: 'A Real Game-Changer',
-      paragraph: "I was hesitant at first when I heard about the $1400 subsidy card, but I decided to apply anyway. I'm so glad I did. This card has been a real game-changer for me. It's helped me cover the cost of things like rent, utilities, and other expenses that I would normally struggle to pay for. I feel like I can breathe easier now knowing that I have this card to fall back on. It's a great program, and I'm so grateful to have been eligible for it.",
+      paragraph: "I was hesitant at first when I heard about the $16,800 subsidy card, but I decided to apply anyway. I'm so glad I did. This card has been a real game-changer for me. It's helped me cover the cost of things like rent, utilities, and other expenses that I would normally struggle to pay for. I feel like I can breathe easier now knowing that I have this card to fall back on. It's a great program, and I'm so grateful to have been eligible for it.",
       name: 'Daniel F.',
     },
     {
       headline: 'Peace of Mind for Expenses',
-      paragraph: "I never thought I would qualify for the $1400 subsidy card, but I decided to apply anyway. I was pleasantly surprised to find out that I was eligible, and I've been using the card to help me with all sorts of expenses. It's been especially helpful for things like medical bills and prescription medications, which can be really expensive. I'm so grateful for this program and for the peace of mind that it's given me. It's a great resource for anyone who needs a little extra help making ends meet.",
+      paragraph: "I never thought I would qualify for the $16,800 subsidy card, but I decided to apply anyway. I was pleasantly surprised to find out that I was eligible, and I've been using the card to help me with all sorts of expenses. It's been especially helpful for things like medical bills and prescription medications, which can be really expensive. I'm so grateful for this program and for the peace of mind that it's given me. It's a great resource for anyone who needs a little extra help making ends meet.",
       name: 'Jorge Pulido',
     },
   ];
