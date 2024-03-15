@@ -324,7 +324,7 @@ export default function Fifth_SP() {
                 <b>
                   Americans under 65 can now qualify for{" "}
                   <span style={{ backgroundColor: "#fde047" }}>
-                    The $6400 Health Credits Subsidy in 2024.
+                    The $16,800 Health Credits Subsidy in 2024.
                   </span>{" "}
                   Here's how!
                 </b>
@@ -333,7 +333,7 @@ export default function Fifth_SP() {
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
                 Americans under 65 years old can claim the 2024 Health Credits
-                Subsidy that gives them up to $6400. Americans can use the funds
+                Subsidy that gives them up to $16,800. Americans can use the funds
                 to fully cover the cost of their monthly expenses such as
                 Groceries, Rent, Bills and any other expenses they may have!
               </div>
