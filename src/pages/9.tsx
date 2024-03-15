@@ -109,10 +109,10 @@ export default function Fifth_SP() {
     exit: "toast-exit",
   });
   const messages = [
-    "Velia E. Dunn from Salem, OR just qualified for $6400 Allowance Card",
-    "Paul N. Parsons from Petersburg, VA just qualified for $3200 Allowance Card.",
-    "Paul N. Parsons from New Town, ND just qualified for $3600 Allowance Card.",
-    "Mary T. Pritts from Oakland, CA just qualified for $4200 Allowance Card.",
+    "Velia E. Dunn from Salem, OR just qualified for $16,800 Allowance Card",
+    "Paul N. Parsons from Petersburg, VA just qualified for $16,800 Allowance Card.",
+    "Paul N. Parsons from New Town, ND just qualified for $16,800 Allowance Card.",
+    "Mary T. Pritts from Oakland, CA just qualified for $16,800 Allowance Card.",
   ];
   //   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
@@ -131,7 +131,7 @@ export default function Fifth_SP() {
     );
 
     // Make specific dollar amounts bold only in specific lines
-    const specialAmounts = ["$6400", "$3200", "$3600", "$4200"];
+    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
     specialAmounts.forEach((amount) => {
       if (message.includes(amount)) {
         boldedMessage = boldedMessage.replace(
@@ -372,7 +372,7 @@ export default function Fifth_SP() {
             <div className="checking">
               <div className="congrats">Congratulation, You Qualify!</div>
               <div className="top-description-5">
-                Make A <b>Quick Call</b> Activate Your <b>$6400 Subsidy</b>{" "}
+                Make A <b>Quick Call</b> Activate Your <b>$16,800 Subsidy</b>{" "}
                 before someone else does!
               </div>
               <div className="spots-count">Spots remaining: 4</div>
@@ -395,7 +395,7 @@ export default function Fifth_SP() {
             </div>
           ) : (
             <div className="checking">
-              Sorry, You're not eligible for the $6400 Health Credits Subsidy!
+              Sorry, You're not eligible for the $16,800 Health Credits Subsidy!
             </div>
           )}
 
