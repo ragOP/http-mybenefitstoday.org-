@@ -7,7 +7,7 @@ import Carousel from "./Carousel";
 
 import { scrollTo } from "../utils";
 
-import Head_bgs from "../assets/16800.png";
+import Head_bgs from "../assets/aa.png";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -109,10 +109,10 @@ export default function Fifth_SP() {
     exit: "toast-exit",
   });
   const messages = [
-    "Velia E. Dunn from Salem, OR just qualified for $16,800 Allowance Card",
-    "Paul N. Parsons from Petersburg, VA just qualified for $16,800 Allowance Card.",
-    "Paul N. Parsons from New Town, ND just qualified for $16,800 Allowance Card.",
-    "Mary T. Pritts from Oakland, CA just qualified for $16,800 Allowance Card.",
+    "Velia E. Dunn from Salem, OR just qualified for $5,800 Allowance Card",
+    "Paul N. Parsons from Petersburg, VA just qualified for $5,800 Allowance Card.",
+    "Paul N. Parsons from New Town, ND just qualified for $5,800 Allowance Card.",
+    "Mary T. Pritts from Oakland, CA just qualified for $5,800 Allowance Card.",
   ];
   //   const messages = x.map(message =>  `${message}\n32 sec ago`);
   const notify = (message: any) => {
@@ -131,7 +131,7 @@ export default function Fifth_SP() {
     );
 
     // Make specific dollar amounts bold only in specific lines
-    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
+    const specialAmounts = ["$5,800", "$5,800", "$5,800", "$5,800"];
     specialAmounts.forEach((amount) => {
       if (message.includes(amount)) {
         boldedMessage = boldedMessage.replace(
@@ -324,7 +324,7 @@ export default function Fifth_SP() {
                 <b>
                   Americans under 65 can now qualify for{" "}
                   <span style={{ backgroundColor: "#fde047" }}>
-                    The $16,800 Health Credits Subsidy in 2024.
+                    The $5,800 Health Credits Subsidy in 2024.
                   </span>{" "}
                   Here's how!
                 </b>
@@ -333,7 +333,7 @@ export default function Fifth_SP() {
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
                 Americans under 65 years old can claim the 2024 Health Credits
-                Subsidy that gives them up to $16,800. Americans can use the funds
+                Subsidy that gives them up to $5,800. Americans can use the funds
                 to fully cover the cost of their monthly expenses such as
                 Groceries, Rent, Bills and any other expenses they may have!
               </div>
@@ -341,7 +341,7 @@ export default function Fifth_SP() {
                 If you have not yet claimed your monthly allowance then answer
                 the questions below and once approved{" "}
                 <b>
-                  you will have your $16,800 Health Credits mailed to you within
+                  you will have your $5,800 Health Credits mailed to you within
                   a few days ready for use!
                 </b>
               </div>
@@ -372,7 +372,7 @@ export default function Fifth_SP() {
             <div className="checking">
               <div className="congrats">Congratulation, You Qualify!</div>
               <div className="top-description-5">
-                Make A <b>Quick Call</b> Activate Your <b>$16,800 Subsidy</b>{" "}
+                Make A <b>Quick Call</b> Activate Your <b>$5,800 Subsidy</b>{" "}
                 before someone else does!
               </div>
               <div className="spots-count">Spots remaining: 4</div>
@@ -395,7 +395,7 @@ export default function Fifth_SP() {
             </div>
           ) : (
             <div className="checking">
-              Sorry, You're not eligible for the $16,800 Health Credits Subsidy!
+              Sorry, You're not eligible for the $5,800 Health Credits Subsidy!
             </div>
           )}
 

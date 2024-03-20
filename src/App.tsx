@@ -17,7 +17,7 @@ import S from './pages/7'
 import New from './pages/8'
 import Model from './pages/9'
 import Spain from './pages/10'
-
+import Engca from './pages/engca'
 import Visits from "./pages/visits";
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
              {/* <Route path = "/engmed1" element = {<S />} /> */}
 {/*           <Route path = "/engaca1" element = {<New/>}/> */}
           <Route path = "/" element = {<Model/>}/>
+          <Route path = "/engaca2" element = {<Engca/>}/>
 {/*           <Route path = "/spanish" element = {<Spain/>}/> */}
           {/* <Route path = "/spanmed1" element = {<Third_SP />} />
           <Route path = "/hbosolar" element = {<Forth_EN />} />
