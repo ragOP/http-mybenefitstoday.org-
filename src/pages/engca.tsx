@@ -7,7 +7,7 @@ import Carousel from "./Carousel";
 
 import { scrollTo } from "../utils";
 
-import Head_bgs from "../assets/aa.png";
+import Head_bgs from "../assets/lala.png";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
