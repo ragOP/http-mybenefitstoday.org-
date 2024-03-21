@@ -11,7 +11,7 @@ import Head_bgs from "../assets/aa.png";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Headline from "../assets/headline_spandeb1.png";
+import Headline from "../assets/lala.png";
 import { Id } from "react-toastify";
 
 // google tag manager
