@@ -695,7 +695,7 @@ height: 100vh;
   background-color: #1e3a8a;
   font-size: 1.1rem;
   font-weight: 800;
-  padding-left: 25px;
+  padding-left: 16rem;
   text-align: left !important;
 }
 
@@ -704,6 +704,8 @@ height: 100vh;
       height: 66px; /* Adjusted height for smaller screens */
       width: 100%; /* Ensure it stays 100% width */
       text-align: left!important;
+      padding-left: 25px;
+
   }
 }
 
