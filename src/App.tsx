@@ -21,6 +21,8 @@ import Engca from './pages/engca'
 import Visits from "./pages/visits";
 import Engaca3 from "./pages/engaca3";
 import Tsf from './pages/Tsf';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 
 function App() {
   
@@ -52,6 +54,8 @@ function App() {
 
           <Route path = "/view" element = {<Visits />} />
           <Route path = "/*" element = {<NotFound />} />
+          <Route path="/terms-and-conditions" element={<Terms />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
         </Routes>
       </div>
     </Router>
