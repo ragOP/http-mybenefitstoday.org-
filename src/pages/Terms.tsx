@@ -5,7 +5,7 @@ const Terms = () => {
     <div className="page">
     <div className="header">
     <div className="container">
-    <p className="title">Terms and Conditions for mybenefitstoday.org</p>
+    <p className="title">Terms and Conditions for flexbenefitsusa.com</p>
     </div>
     </div>
     <div className="translations-content-container">
@@ -27,7 +27,7 @@ const Terms = () => {
     <p><strong>Country</strong> refers to: Florida, United States</p>
     </li>
     <li>
-    <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers tomybenefitstoday.org, 25 SE 2nd Ave Ste 550 PMB 63 Miami, FL 33131.</p>
+    <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers toflexbenefitsusa.com, 25 SE 2nd Ave Ste 550 PMB 63 Miami, FL 33131.</p>
     </li>
     <li>
     <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
@@ -42,7 +42,7 @@ const Terms = () => {
     <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
     </li>
     <li>
-    <p><strong>Website</strong> refers tomybenefitstoday.org, accessible from <a href="mybenefitstoday.org" rel="external nofollow noopener" target="_blank">mybenefitstoday.org</a></p>
+    <p><strong>Website</strong> refers toflexbenefitsusa.com, accessible from <a href="flexbenefitsusa.com" rel="external nofollow noopener" target="_blank">flexbenefitsusa.com</a></p>
     </li>
     <li>
     <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
