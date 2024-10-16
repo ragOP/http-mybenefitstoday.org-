@@ -347,18 +347,16 @@ export default function Tsf() {
             <div className="main-descrition-5-5">
               <div className="main-des-title-6-7">
                 <b>
-               Seniors On Medicare Can Unlock Upto $900 Monthly Food Allowance This Week!
-                </b>
+                Seniors On Medicare Can Unlock $500 Monthly Flex Card This Week!                </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div  style={{marginTop:'14px'}}className="main-des-5">
-         Eligible Americans are taking advantage of this opportunity to secure their monthly allowance card, which covers the cost of groceries, rent, bills, and other monthly expenses.
+              Older Americans are taking advantage of this opportunity to secure their Monthly Flexible Spending Card, which covers the cost of groceries, rent, bills, and other monthly expenses.
 
               </div>
               <div className="main-des-5"  style={{marginTop:'-5px'}}>
-        Use your allowance card at your favorite places like Walmart, Target, CVS, and many more. Answer the questions below to check your eligibility now!
-              </div>
+              Use your Flex card at your favorite places like Walmart, Target, CVS, and many more. Answer the questions below to check your eligibility now!              </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
             <div style={{marginTop:'-5px'}} className="survey">
