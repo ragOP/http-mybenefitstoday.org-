@@ -338,7 +338,7 @@ export default function Tsf() {
   return (
     <div>
 {/*      <ToastContainer /> */}
-      <div style={{marginBottom:'4px',textAlign:"left"}} className="top-sticky-blue-test2" id="top">
+      <div style={{marginBottom:'4px',}} className="top-sticky-blue-test2" id="top">
       Flex Benefits USA      </div>
       {step === "process" ? (
         <>
