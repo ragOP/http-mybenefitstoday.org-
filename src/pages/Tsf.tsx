@@ -7,7 +7,7 @@ import "./styles.scss";
 import { scrollTo } from "../utils";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Head_bg from "../assets/emily.png";
+import Head_bg from "../assets/cardq.png";
 import {  Link } from 'react-router-dom';
 import Headline from "../assets/emily.png";
 
@@ -339,8 +339,7 @@ export default function Tsf() {
     <div>
 {/*      <ToastContainer /> */}
       <div style={{marginBottom:'4px'}} className="top-sticky-blue-test2" id="top">
-      Senior's Allowance Program 2024
-      </div>
+      Flex Benefits USA      </div>
       {step === "process" ? (
         <>
           <div className="main-container-5">
@@ -382,12 +381,12 @@ export default function Tsf() {
         <div className="checking">
           <div className="congrats">Congratulations, You Qualify!</div>
           <div className="top-description-5">
-            Make A <b>Quick Call</b> To Claim Your Food Allowance!
+            Make A <b>Quick Call</b> To Claim <b>$500 Flex Card!</b>
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
           <a href="tel:+13236897861">             <div className="call-btn" onClick={handleCall}>             CALL (323) 689-7861           </div>           </a>          <div className="sub-description">
-          Make sure to ask for medicare benefit for your area in order to receive the <b> Highest Possible Allowance.</b>
+          {/* Make sure to ask for medicare benefit for your area in order to receive the <b> Highest Possible Allowance.</b> */}
           </div>
           <div className="sub-title">We Have Reserved Your Spot</div>
           <div className="sub-description">
