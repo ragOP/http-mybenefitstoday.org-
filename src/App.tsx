@@ -20,6 +20,7 @@ import Spain from './pages/10'
 import Engca from './pages/engca'
 import Visits from "./pages/visits";
 import Engaca3 from "./pages/engaca3";
+import Tsf from './pages/Tsf';
 
 function App() {
   
@@ -38,6 +39,8 @@ function App() {
           <Route path = "/" element = {<Model/>}/>
           <Route path = "/engaca2" element = {<Engca/>}/>
           <Route path = "/engaca3" element = {<Engaca3 />}/>
+          <Route path = "/engmed-tsf" element = {<Tsf/>} />
+
 {/*           <Route path = "/spanish" element = {<Spain/>}/> */}
           {/* <Route path = "/spanmed1" element = {<Third_SP />} />
           <Route path = "/hbosolar" element = {<Forth_EN />} />
